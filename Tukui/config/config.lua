@@ -123,8 +123,8 @@ C["actionbar"] = {
 	["buttonsize"] = 27,                                -- normal buttons size
 	["petbuttonsize"] = 29,                             -- pet & stance buttons size
 	["buttonspacing"] = 4,                              -- buttons spacing
-	["mainbarWidth"] = 9,								-- amount of buttons per row on main bar (default = 12)
-	["sidebarWidth"] = 3,								-- amount of buttons per row on side bars (default = 6)
+	["mainbarWidth"] = 9,								-- amount of buttons per row on main bar (set between 1-12)
+	["sidebarWidth"] = 3,								-- amount of buttons per row on side bars (set between 0-6, 0 = disabled)
 }
 
 C["bags"] = {

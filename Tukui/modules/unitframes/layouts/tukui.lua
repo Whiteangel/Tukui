@@ -518,11 +518,7 @@ local function Shared(self, unit)
 				CPoints[i]:Width(12)
 				CPoints[i]:SetTexture(bubbleTex)
 				if i == 1 then
-					if T.lowversion then
-						CPoints[i]:Point("TOPRIGHT", 15, 1.5)
-					else
-						CPoints[i]:Point("TOPLEFT", -15, 1.5)
-					end
+					CPoints[i]:Point("TOPLEFT", -15, 1.5)
 					CPoints[i]:SetVertexColor(0.69, 0.31, 0.31)
 				else
 					CPoints[i]:Point("TOP", CPoints[i-1], "BOTTOM", 1)
@@ -689,11 +685,7 @@ local function Shared(self, unit)
 			local mhpb = CreateFrame('StatusBar', nil, self.Health)
 			mhpb:SetPoint('TOPLEFT', self.Health:GetStatusBarTexture(), 'TOPRIGHT', 0, 0)
 			mhpb:SetPoint('BOTTOMLEFT', self.Health:GetStatusBarTexture(), 'BOTTOMRIGHT', 0, 0)
-			if T.lowversion then
-				mhpb:SetWidth(186)
-			else
-				mhpb:SetWidth(250)
-			end
+			mhpb:SetWidth(frameWidth)
 			mhpb:SetStatusBarTexture(normTex)
 			mhpb:SetStatusBarColor(0, 1, 0.5, 0.25)
 			mhpb:SetMinMaxValues(0,1)

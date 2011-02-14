@@ -41,11 +41,9 @@ T.UIScale = function()
 	if C["general"].autoscale == true then
 		C["general"].uiscale = min(2, max(.64, 768/string.match(({GetScreenResolutions()})[GetCurrentResolution()], "%d+x(%d+)")))
 	end
-
-	if T.lowversion then
-		T.raidscale = 0.8
-	else
-		T.raidscale = 1
+	
+	if C.actionbar.sidebarWidth == 0 then
+		T.lowversion = true
 	end
 end
 T.UIScale()

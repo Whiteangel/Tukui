@@ -15,7 +15,7 @@ local function ShowOrHideBar(bar, button)
 					db.hidebar7 = true
 				elseif TukuiBar6:IsShown() then
 					TukuiBar6:Hide()
-					bar:SetWidth((T.buttonsize * 1) + (T.buttonspacing * 2))
+					bar:SetWidth((T.buttonsize * 1))
 					db.hidebar6 = true
 				else
 					bar:Hide()
@@ -24,7 +24,7 @@ local function ShowOrHideBar(bar, button)
 				if button == TukuiBar5ButtonBottom then
 					if not bar:IsShown() then
 						bar:Show()
-						bar:SetWidth((T.buttonsize * 1) + (T.buttonspacing * 2))
+						bar:SetWidth((T.buttonsize))
 					elseif not TukuiBar6:IsShown() then
 						TukuiBar6:Show()
 						bar:SetWidth((T.buttonsize * 2) + (T.buttonspacing * 3))
@@ -42,7 +42,7 @@ local function ShowOrHideBar(bar, button)
 		
 		-- for bar 2½+3½+4, high reso only
 		if bar == TukuiBar4 then
-			TukuiBar1:SetHeight(T.buttonsize * 1)
+			TukuiBar1:SetHeight(T.buttonsize)
 			TukuiBar2:SetHeight(T.buttonsize)
 			TukuiBar3:SetHeight(T.buttonsize)
 			TukuiBar2Button:SetHeight(T.buttonsize)
@@ -308,7 +308,7 @@ init:SetScript("OnEvent", function(self, event)
 		
 		if db.hidebar6 then
 			TukuiBar6:Hide()
-			TukuiBar5:SetWidth((T.buttonsize * 1) + (T.buttonspacing * 2))
+			TukuiBar5:SetWidth(T.buttonsize)
 		end
 		
 		TukuiBar5ButtonTop:SetWidth(TukuiBar5:GetWidth())
