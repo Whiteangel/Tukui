@@ -154,11 +154,11 @@ local function CreateAuraHeader(filter, ...)
 	header:SetAttribute("filter", filter)
 	header:SetAttribute("point", "TOPRIGHT")
 	header:SetAttribute("minWidth", 300)
-	header:SetAttribute("minHeight", 94)
+	header:SetAttribute("minHeight", 102)
 	header:SetAttribute("xOffset", -36)
-	header:SetAttribute("wrapYOffset", -68)
-	header:SetAttribute("wrapAfter", 16)
-	header:SetAttribute("maxWraps", 2)
+	header:SetAttribute("wrapYOffset", -36)
+	header:SetAttribute("wrapAfter", 4)
+	header:SetAttribute("maxWraps", 3)
 	
 	-- look for weapons buffs
 	if filter == "HELPFUL" then
@@ -202,10 +202,7 @@ start:SetScript("OnEvent", function(self)
 			frame:SetAttribute("xOffset", 36)
 		end
 		if position:match("BOTTOM") then
-			frame:SetAttribute("wrapYOffset", 68)
-		end
-		if T.lowversion then
-			frame:SetAttribute("wrapAfter", 8)
+			frame:SetAttribute("wrapYOffset", 36)
 		end
 	end
 end)
